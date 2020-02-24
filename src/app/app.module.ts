@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CsvTableComponent} from './csv-table/csv-table.component';
 import {MaterialDesignModule} from './material-design/material-design.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {MaterialDesignModule} from './material-design/material-design.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MaterialDesignModule
   ],
   providers: [],

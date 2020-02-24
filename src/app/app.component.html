@@ -1,1 +1,7 @@
-<button mat-flat-button color="primary">Click me!</button>
+<div style="background: gray; color: white">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu" yPosition="below">
+    <button mat-menu-item>Available files</button>
+  </mat-menu>
+</div>
+<button mat-flat-button color="primary">Click me!</button>*
