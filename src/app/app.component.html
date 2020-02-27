@@ -1,7 +1,44 @@
-<div style="background: gray; color: white">
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu" yPosition="below">
-    <button mat-menu-item>Available files</button>
-  </mat-menu>
-</div>
-<button mat-flat-button color="primary">Click me!</button>*
+<mat-sidenav-container [class.m2app-dark]="isDarkTheme" style="height: 100vh" autosize>
+  <mat-sidenav #sidenav mode="side" class="app-sidenav" color="primary">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <button mat-button (click)="isDarkTheme = !isDarkTheme" class="app-sidebar-button">
+          TOGGLE THEME
+        </button>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <button mat-button class="app-sidebar-button" routerLink="/">
+          <i class="material-icons">dashboard</i>
+          <span style="margin-left: 2px">Dashboard</span>
+        </button>
+        <a routerLink="csv-table">
+        </a>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <button mat-button class="app-sidebar-button" routerLink="csv-table">
+          <i class="material-icons">table_chart</i>
+          <span style="margin-left: 2px">Available tables</span>
+        </button>
+        <a routerLink="csv-table">
+        </a>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-button class="app-menu-button" (click)="sidenav.toggle()">
+      <i *ngIf="sidenav.opened" class="material-icons">chevron_left</i>
+      <i *ngIf="!sidenav.opened" class="material-icons">menu</i>
+      <span>Menu</span>
+    </button>
+  </mat-toolbar>
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+
+
+</mat-sidenav-container>
+
+

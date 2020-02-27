@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-csv-table',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./csv-table.component.scss']
 })
 export class CsvTableComponent implements OnInit {
+  availableTablesControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
