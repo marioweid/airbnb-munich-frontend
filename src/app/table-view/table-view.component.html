@@ -1,0 +1,9 @@
+<table mat-table *ngIf="showTable" [dataSource]="fileData" class="mat-elevation-z8">
+  <ng-container *ngFor="let key of getHeaderCells()" matColumnDef="{{key}}">
+    <th mat-header-cell *matHeaderCellDef> {{key}}</th>
+    <td mat-cell *matCellDef="let element"> {{getObjectKeyValue(element, key)}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="getHeaderCells()"></tr>
+  <tr mat-row *matRowDef="let row; columns: getHeaderCells()"></tr>
+</table>
