@@ -1,7 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AvailableFilesListComponent} from './available-files-list/available-files-list-component';
@@ -17,7 +18,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
-import { TableViewComponent } from './table-view/table-view.component';
+import {TableViewComponent} from './table-view/table-view.component';
 import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
@@ -27,7 +28,6 @@ import {MatTableModule} from '@angular/material/table';
     PageNotFoundComponent,
     LandingPageComponent,
     TableViewComponent
-
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,8 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatIconModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
