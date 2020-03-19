@@ -1,0 +1,25 @@
+<div style="text-align: center">
+  <mat-toolbar>Available Views</mat-toolbar>
+  <div>
+    <mat-action-list>
+
+      <ng-container *ngIf="tables.length">
+        <div mat-subheader>Tables</div>
+        <mat-list-item *ngFor="let table of tables" (click)="requestFile(table)">
+          <mat-icon mat-list-icon>table_chart</mat-icon>
+          <p> {{ table }} </p>
+        </mat-list-item>
+      </ng-container>
+
+      <ng-container *ngIf="geoMaps.length">
+        <mat-divider *ngIf="tables.length"></mat-divider>
+        <div mat-subheader>Geo-Maps</div>
+        <mat-list-item *ngFor="let map of geoMaps" (click)="requestFile(map)">
+          <mat-icon mat-list-icon>table_chart</mat-icon>
+          <p> {{ map }} </p>
+        </mat-list-item>
+      </ng-container>
+
+    </mat-action-list>
+  </div>
+</div>

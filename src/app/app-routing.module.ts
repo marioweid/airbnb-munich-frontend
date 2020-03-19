@@ -1,13 +1,14 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {CsvTableComponent} from './csv-table/csv-table.component';
+import {AvailableFilesListComponent} from './available-files-list/available-files-list-component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
+import {TableViewComponent} from './table-view/table-view.component';
 
 
 const routes: Routes = [
-  {path: 'csv-table', component: CsvTableComponent},
-  {path: 'csvTable', redirectTo: '/csv-table', pathMatch: 'full'},
+  {path: 'files', component: AvailableFilesListComponent},
+  {path: 'files/:filename', component: TableViewComponent},
   {path: '', component: LandingPageComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

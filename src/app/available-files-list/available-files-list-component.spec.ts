@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CsvTableComponent } from './csv-table.component';
+import { AvailableFilesListComponent } from './available-files-list-component';
 
 describe('CsvTableComponent', () => {
-  let component: CsvTableComponent;
-  let fixture: ComponentFixture<CsvTableComponent>;
+  let component: AvailableFilesListComponent;
+  let fixture: ComponentFixture<AvailableFilesListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CsvTableComponent ]
+      declarations: [ AvailableFilesListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CsvTableComponent);
+    fixture = TestBed.createComponent(AvailableFilesListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
